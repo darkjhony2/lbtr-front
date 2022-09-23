@@ -1,0 +1,10 @@
+.navbar {
+    background-color: rgb(89, 108, 114);
+}
+
+.navbar-item-border {
+    display: inline-block;
+    position: relative;
+    border-bottom: 0.1px solid rgb(238, 232, 232);
+}
+
