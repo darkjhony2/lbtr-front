@@ -49,10 +49,10 @@ export const NewTransfer = () => {
                             </Row>
                             <Row className="mt-2">
                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                    <Label>Código LBTR <span style={{ color: 'red' }}>(*)</span>:</Label>
+                                    <Label>Código LBTR{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                 </Col>
                                 <Col sm={8}>
-                                    <Input className="textField" type="select"></Input>
+                                    <Input className="textField" type="select"><option>Seleccione</option></Input>
                                 </Col>
                             </Row>
                             <Row className="mt-2">
@@ -80,7 +80,7 @@ export const NewTransfer = () => {
                                 </Col>
                             </Row>
                             {
-                                clientData === true ?
+                                clientData === false ?
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
                                             <Label>Observaciones:</Label>
@@ -96,15 +96,15 @@ export const NewTransfer = () => {
                         <Col sm={6} style={{ paddingLeft: '5%', paddingTop: '2%', paddingBottom: '2%' }}>
                             <Row className="mt-2">
                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                    <Label>Participante Destino <span style={{ color: 'red' }}>(*)</span>:</Label>
+                                    <Label>Participante Destino{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                 </Col>
                                 <Col sm={8}>
-                                    <Input className="textField" type="select"></Input>
+                                    <Input className="textField" type="select"><option>Seleccione</option></Input>
                                 </Col>
                             </Row>
                             <Row className="mt-2">
                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                    <Label>Monto <span style={{ color: 'red' }}>(*)</span>:</Label>
+                                    <Label>Monto{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                 </Col>
                                 <Col sm={8}>
                                     <Input className="textField" type="text"></Input>
@@ -112,7 +112,7 @@ export const NewTransfer = () => {
                             </Row>
                             <Row className="mt-2">
                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                    <Label>Cuenta Destino <span style={{ color: 'red' }}>(*)</span>:</Label>
+                                    <Label>Cuenta Destino{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                 </Col>
                                 <Col sm={8}>
                                     <Input className="textField" disabled type="text"></Input>
@@ -126,14 +126,27 @@ export const NewTransfer = () => {
                                     <Input className="textField" type="text"></Input>
                                 </Col>
                             </Row>
-                            <Row className="mt-2">
-                                <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                    <Label>Observaciones:</Label>
-                                </Col>
-                                <Col sm={8}>
-                                    <Input type="textarea"></Input>
-                                </Col>
-                            </Row>
+                            {
+                                clientData === true ?
+                                    <Row className="mt-2">
+                                        <Col style={{ paddingRight: 0, maxWidth: 200 }}>
+                                            <Label>Observaciones:</Label>
+                                        </Col>
+                                        <Col sm={8}>
+                                            <Input type="textarea"></Input>
+                                        </Col>
+                                    </Row>
+                                    :
+                                    <Row className="mt-2">
+                                        <Col style={{ paddingRight: 0, maxWidth: 200 }}>
+                                            <Label>Afecto a ITF:</Label>
+                                        </Col>
+                                        <Col sm={4}>
+                                            <Input className="textField" type="select"><option>Seleccione</option></Input>
+                                        </Col>
+                                    </Row>
+                            }
+
                         </Col>
                     </Row>
                     {
@@ -168,7 +181,7 @@ export const NewTransfer = () => {
                                                 <Label>Dirección:</Label>
                                             </Col>
                                             <Col sm={8}>
-                                                <Input className="textField" type="select"></Input>
+                                                <Input className="textField" type="text"></Input>
                                             </Col>
                                         </Row>
                                         <Row className="mt-2">
@@ -192,7 +205,7 @@ export const NewTransfer = () => {
                                                 <Label>Afecto a ITF:</Label>
                                             </Col>
                                             <Col sm={4}>
-                                                <Input className="textField" type="select"></Input>
+                                                <Input className="textField" type="select"><option>Seleccione</option></Input>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -205,7 +218,7 @@ export const NewTransfer = () => {
                                                 <Label>CCI:</Label>
                                             </Col>
                                             <Col sm={8}>
-                                                <Input className="textField" type="select"></Input>
+                                                <Input className="textField" type="text"></Input>
                                             </Col>
                                         </Row>
                                         <Row className="mt-2">
