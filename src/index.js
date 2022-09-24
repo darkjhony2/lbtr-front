@@ -5,6 +5,7 @@ import { App } from './App';
 import './style.css';
 import './assets/styles/navbar.css';
 import './assets/styles/footer.css';
+import './assets/styles/components.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

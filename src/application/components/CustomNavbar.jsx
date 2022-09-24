@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavItem, UncontrolledDropdown } from "reactstrap"
+import { Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavItem, Row, UncontrolledDropdown } from "reactstrap"
 import { HomePage } from "../pages/HomePage";
 
 export const CustomNavbar = () => {
@@ -10,7 +10,7 @@ export const CustomNavbar = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div>
+        <Row style={{padding: 0, margin: 0}}>
             <Navbar className='ps-3 pe-3 navbar'
                 expand="md"
                 light>
@@ -20,7 +20,7 @@ export const CustomNavbar = () => {
                         className="me-auto"
                         navbar>
                         <NavItem>
-                            <span style={{ color: 'rgb(238, 232, 232)', marginRight: 10 }} className="navbar-item-border mt-2">Inicio</span>
+                            <span onClick={e => window.location.href = "/"} style={{ color: 'rgb(238, 232, 232)', marginRight: 10, cursor: 'pointer', marginLeft: 15 }} className="navbar-item-border mt-2">Inicio</span>
                         </NavItem>
                         <NavItem>
                             <UncontrolledDropdown
@@ -50,10 +50,13 @@ export const CustomNavbar = () => {
                                     <span className="navbar-item-border">Operación</span>
                                 </DropdownToggle>
                                 <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
+                                    <DropdownItem>
+                                        <DropdownItem href={urlRoot + '/transferencias/nueva-transferencia'}>
+                                            <span>Nueva Transferencia</span>
+                                        </DropdownItem>
                                     </DropdownItem>
                                 </DropdownMenu>
+
                             </UncontrolledDropdown>
                         </NavItem>
                         <NavItem>
@@ -141,7 +144,7 @@ export const CustomNavbar = () => {
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </NavItem>
-                        <NavItem style={{ marginLeft: '74%' }}>
+                        <NavItem style={{ marginLeft: '40%' }}>
                             <UncontrolledDropdown
                                 inNavbar
                                 nav>
@@ -158,10 +161,9 @@ export const CustomNavbar = () => {
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </NavItem>
-
                     </Nav>
                 </Collapse>
             </Navbar>
-        </div>
+        </Row>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row } from 'reactstrap'
+import { Container, Row } from 'reactstrap'
 import { CustomFooter, CustomNavbar } from '../components';
 
 export const HomePage = () => {
@@ -9,9 +9,13 @@ export const HomePage = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Row >
-      <CustomNavbar />
-      <CustomFooter />
-    </Row>
+    <>
+      <Row >
+        <CustomNavbar />
+      </Row>
+      <Row>
+        <CustomFooter />
+      </Row>
+    </>
   )
 }

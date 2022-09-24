@@ -1,0 +1,15 @@
+.button {
+    background-color:  rgb(196, 22, 28) !important;
+    border-color: rgb(196, 22, 28) !important;
+    padding: 15px 20px 15px 20px !important;
+    box-shadow: 0px 2px 15px gray;
+  }
+  
+  .textField {
+    padding: 3px 12px 3px 12px !important;
+  }
+
+  .textField:disabled {
+    background-color: rgb(206, 205, 205) !important;
+    border-color: rgb(206, 205, 205) !important;
+  }
