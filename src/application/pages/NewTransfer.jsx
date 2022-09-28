@@ -4,7 +4,7 @@ import { CustomFooter, CustomNavbar } from "../components"
 
 export const NewTransfer = () => {
 
-    const [clientData] = useState(false);
+    const [clientData] = useState(true);
 
     console.log(clientData)
 

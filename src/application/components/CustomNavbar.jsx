@@ -10,160 +10,112 @@ export const CustomNavbar = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <Row style={{padding: 0, margin: 0}}>
-            <Navbar className='ps-3 pe-3 navbar'
-                expand="md"
-                light>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav
-                        className="me-auto"
-                        navbar>
-                        <NavItem>
-                            <span onClick={e => window.location.href = "/"} style={{ color: 'rgb(238, 232, 232)', marginRight: 10, cursor: 'pointer', marginLeft: 15 }} className="navbar-item-border mt-2">Inicio</span>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Configuración</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Operación</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem>
-                                        <DropdownItem href={urlRoot + '/transferencias/nueva-transferencia'}>
-                                            <span>Nueva Transferencia</span>
-                                        </DropdownItem>
-                                    </DropdownItem>
-                                </DropdownMenu>
-
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Consultas locales</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Administración</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Consultas BCRP</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Reportes</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Auditoría</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem href={urlRoot + '/subjects'}>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                        <NavItem style={{ marginLeft: '40%' }}>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav>
-                                <DropdownToggle
-                                    style={{ color: 'rgb(238, 232, 232)' }}
-                                    caret
-                                    nav>
-                                    <span className="navbar-item-border">Interacción digital SAC</span>
-                                </DropdownToggle>
-                                <DropdownMenu end>
-                                    <DropdownItem>
-                                        <span>Opción 1</span>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        </Row>
+        <>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active textWhite" aria-current="page" href="#">Incio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Configuración
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Operación
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Consultas locales
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Administración
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Consultas BCRP
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Reportes
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Auditoría
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav>
+                    <div class="container-fluid" style={{marginRight: 30}}>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Interacción digital SAC
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+        </>
     )
 }

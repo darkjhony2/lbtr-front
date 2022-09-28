@@ -1,14 +1,70 @@
-.navbar {
+nav {
     background-color: rgb(89, 108, 114);
 }
 
-.nav-item {
-    margin-left: 15px;
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
-.navbar-item-border {
+a {
+    padding-bottom: 3px !important;
+}
+
+li {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 0px 0px 0px 15px;
+}
+
+.nav-link {
+    color: #fff !important;
     display: inline-block;
     position: relative;
     border-bottom: 0.1px solid rgb(126, 139, 144);
 }
 
+.textWhite {
+    color: #fff;
+}
+
+.textBlack {
+    color: black;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+/* this is the line we add */
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
