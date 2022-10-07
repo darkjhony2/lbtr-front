@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Container, Row } from 'reactstrap'
-import { CustomFooter, CustomNavbar } from '../components';
+import { Row } from 'reactstrap'
+import { CustomCover } from '../components';
 
 export const HomePage = () => {
 
@@ -10,12 +10,8 @@ export const HomePage = () => {
 
   return (
     <>
-      <Row >
-        <CustomNavbar />
-      </Row>
-      <Row>
-        <CustomFooter />
-      </Row>
+      <CustomCover>
+      </CustomCover>
     </>
   )
 }

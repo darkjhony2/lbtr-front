@@ -19,16 +19,16 @@ export const CustomNavbar = () => {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active textWhite" aria-current="page" href="#">Incio</a>
+                                <a class="nav-link active textWhite" aria-current="page" href="/">Incio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Configuración
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -36,9 +36,9 @@ export const CustomNavbar = () => {
                                     Operación
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -46,9 +46,9 @@ export const CustomNavbar = () => {
                                     Consultas locales
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -56,9 +56,9 @@ export const CustomNavbar = () => {
                                     Administración
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -66,9 +66,9 @@ export const CustomNavbar = () => {
                                     Consultas BCRP
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -76,9 +76,9 @@ export const CustomNavbar = () => {
                                     Reportes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -86,9 +86,9 @@ export const CustomNavbar = () => {
                                     Auditoría
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -106,9 +106,9 @@ export const CustomNavbar = () => {
                                         Interacción digital SAC
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
+                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
