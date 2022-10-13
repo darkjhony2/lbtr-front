@@ -1,0 +1,10 @@
+tr.lbtr-headrow {
+    background-color: rgb(196,22,28);
+    color: white;
+    text-align: center;
+}
+
+tr.lbtr-bodyrow {
+    background-color: rgb(236,236,236);
+    text-align: center;
+}

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavItem, Row, UncontrolledDropdown } from "reactstrap"
-import { HomePage } from "../pages/HomePage";
 
 export const CustomNavbar = () => {
 
@@ -11,104 +9,104 @@ export const CustomNavbar = () => {
 
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-light ">
+                <div className="container-fluid">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active textWhite" aria-current="page" href="/">Incio</a>
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link active textWhite" aria-current="page" href="/">Incio</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Configuración
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Operación
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Consultas locales
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Administración
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Consultas BCRP
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Reportes
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Auditoría
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <nav>
-                    <div class="container-fluid" style={{marginRight: 30}}>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                    <div className="container-fluid" style={{marginRight: 30}}>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul className="navbar-nav">
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Interacción digital SAC
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Action</a></li>
-                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li style={{paddingLeft: 0}}><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
