@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Container, Input, Label, Row } from "reactstrap"
-import { CustomCover, CustomFooter, CustomNavbar } from "../components"
+import { CustomCover } from "../../components";
 
 export const NewTransfer = () => {
 

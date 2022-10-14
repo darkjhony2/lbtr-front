@@ -37,6 +37,7 @@ export const CustomNavbar = () => {
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">

@@ -1,14 +1,14 @@
 import { Button, Col, Container, Input, Label, Row } from "reactstrap"
-import { CustomCover } from "../components"
+import { CustomCover } from "../../components"
 
-export const NewCurrencyBuy = () => {
+export const NewCurrencySell = () => {
     return (
         <Container fluid style={{ position: 'relative', paddingBottom: 60, minHeight: '100vh' }}>
             <CustomCover>
                 <Container fluid className="p-3">
                     <Row>
                         <Col>
-                            <span style={{ color: 'gray', borderBottom: '1px solid' }}>Operación {">"} Compra de Moneda {">"} Nueva Compra</span>
+                            <span style={{ color: 'gray', borderBottom: '1px solid' }}>Operación {">"} Venta de Moneda {">"} Nueva Venta</span>
                         </Col>
                     </Row>
                     <Row style={{ padding: 0 }}>
@@ -16,9 +16,9 @@ export const NewCurrencyBuy = () => {
                             <Button className="button" > <span style={{ padding: 20, paddingTop: 15, paddingBottom: 15 }}>Guardar</span></Button>
                         </Col>
                     </Row>
-                    <Container fluid className="p-4" style={{marginTop: 40}}>
+                    <Container fluid className="p-4" style={{ marginTop: 40 }}>
                         <div className="custom">
-                            <h6 style={{ width: 220, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 25 }}>REGISTRO DE COMPRA</b></h6>
+                            <h6 style={{ width: 220, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 25 }}>REGISTRO DE VENTA</b></h6>
                             <Row>
                                 <Col sm={6} style={{ paddingLeft: '5%', paddingTop: '2%', paddingBottom: '2%' }}>
                                     <Row className="mt-2">
@@ -76,7 +76,7 @@ export const NewCurrencyBuy = () => {
                                             <Label>Estado:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled value={'Pendiente'} type="text"/>
+                                            <Input className="textField" disabled value={'Pendiente'} type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
