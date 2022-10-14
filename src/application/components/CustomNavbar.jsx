@@ -34,9 +34,9 @@ export const CustomNavbar = () => {
                                     Operación
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">

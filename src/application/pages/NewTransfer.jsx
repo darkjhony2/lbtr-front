@@ -23,9 +23,6 @@ export const NewTransfer = () => {
                             <Button className="button" > <span style={{ padding: 20, paddingTop: 15, paddingBottom: 15 }}>Guardar</span></Button>
                         </Col>
                     </Row>
-                    <Row style={{ paddingLeft: '5%' }}>
-
-                    </Row>
                     <Container fluid className="p-4">
                         <div className="custom">
                             <h6 style={{ width: 220, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 12 }}>DATOS DE LA OPERACIÓN</b></h6>
@@ -36,7 +33,7 @@ export const NewTransfer = () => {
                                             <Label>Participante Origen:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" value={'0023 BANCO DE COMERCIO'} disabled type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -44,7 +41,7 @@ export const NewTransfer = () => {
                                             <Label>Fecha de operación:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" value={'22/08/2022'} disabled type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -60,7 +57,7 @@ export const NewTransfer = () => {
                                             <Label>Estado de Registro:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" value={'Pendiente'} disabled type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -68,7 +65,7 @@ export const NewTransfer = () => {
                                             <Label>Moneda:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" value={'03 Dólares Americanos'} disabled type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -76,7 +73,7 @@ export const NewTransfer = () => {
                                             <Label>Cuenta ordinaria:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" value={'1207010023010000003'} disabled type="text"/>
                                         </Col>
                                     </Row>
                                     {
@@ -86,7 +83,7 @@ export const NewTransfer = () => {
                                                     <Label>Observaciones:</Label>
                                                 </Col>
                                                 <Col sm={8}>
-                                                    <Input type="textarea"></Input>
+                                                    <Input type="textarea"/>
                                                 </Col>
                                             </Row>
                                             :
@@ -107,7 +104,7 @@ export const NewTransfer = () => {
                                             <Label>Monto{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="text"></Input>
+                                            <Input className="textField" type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -115,7 +112,7 @@ export const NewTransfer = () => {
                                             <Label>Cuenta Destino{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"></Input>
+                                            <Input className="textField" disabled type="text"/>
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -123,7 +120,7 @@ export const NewTransfer = () => {
                                             <Label>Tipo de Cambio:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="text"></Input>
+                                            <Input className="textField" type="text"/>
                                         </Col>
                                     </Row>
                                     {
@@ -133,7 +130,7 @@ export const NewTransfer = () => {
                                                     <Label>Observaciones:</Label>
                                                 </Col>
                                                 <Col sm={8}>
-                                                    <Input type="textarea"></Input>
+                                                    <Input type="textarea"/>
                                                 </Col>
                                             </Row>
                                             :
@@ -166,7 +163,7 @@ export const NewTransfer = () => {
                                                         <Label>CCI:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -174,7 +171,7 @@ export const NewTransfer = () => {
                                                         <Label>Nombre:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -182,7 +179,7 @@ export const NewTransfer = () => {
                                                         <Label>Dirección:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -190,7 +187,7 @@ export const NewTransfer = () => {
                                                         <Label>Tipo Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -198,7 +195,7 @@ export const NewTransfer = () => {
                                                         <Label>Nro Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -219,7 +216,7 @@ export const NewTransfer = () => {
                                                         <Label>CCI:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -227,7 +224,7 @@ export const NewTransfer = () => {
                                                         <Label>Nombre:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -235,7 +232,7 @@ export const NewTransfer = () => {
                                                         <Label>Tipo Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"></Input>
+                                                        <Input className="textField" type="text"/>
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -243,7 +240,7 @@ export const NewTransfer = () => {
                                                         <Label>Nro Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input type="text"></Input>
+                                                        <Input type="text"/>
                                                     </Col>
                                                 </Row>
                                             </Col>
