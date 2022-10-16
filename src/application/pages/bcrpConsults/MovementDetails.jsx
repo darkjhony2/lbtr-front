@@ -1,8 +1,8 @@
-import { faFileExcel, faSearchPlus } from "@fortawesome/free-solid-svg-icons"
+import { faFileExcel } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import { Button, Col, Container, FormGroup, Input, Label, Row, Table } from "reactstrap"
-import { CustomCover } from "../components"
+import { CustomCover } from "../../components"
 
 export const MovementDetails = () => {
 

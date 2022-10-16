@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button, Col, Container, Input, Label, Row, Table } from "reactstrap"
-import { CustomCover } from "../components"
+import { CustomCover } from "../../components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileExcel, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 

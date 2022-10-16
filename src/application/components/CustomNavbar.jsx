@@ -38,6 +38,8 @@ export const CustomNavbar = () => {
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nuevo-deposito">Nuevo Deposito</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta-overnight">Consulta Overnight</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">

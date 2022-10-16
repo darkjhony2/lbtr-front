@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { HomePage, NewTransfer, AccountBalance, MovementDetails, NewCurrencyBuy, NewCurrencySell, CurrencyConsults } from "../pages"
+import { HomePage, NewTransfer, AccountBalance, MovementDetails, NewCurrencyBuy, NewCurrencySell, CurrencyConsults, NewDeposit, OvernightConsult } from "../pages"
 
 export const AppRoutes = () => {
   return (
@@ -11,6 +11,8 @@ export const AppRoutes = () => {
         <Route path="/operacion/compra-moneda/nueva-compra" element={<NewCurrencyBuy/>} />
         <Route path="/operacion/venta-moneda/nueva-venta" element={<NewCurrencySell/>} />
         <Route path="/operacion/compra-moneda/consulta" element={<CurrencyConsults/>} />
+        <Route path="/operacion/compra-moneda/nuevo-deposito" element={<NewDeposit/>} />
+        <Route path="/operacion/compra-moneda/consulta-overnight" element={<OvernightConsult/>} />
     </Routes>
   )
 }
