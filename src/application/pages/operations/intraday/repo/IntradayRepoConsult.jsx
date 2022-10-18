@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button, Col, Container, Input, Label, Row, Table } from "reactstrap"
 import { CustomCover } from "../../../../components"
 
-export const RepoConsult = () => {
+export const IntradayRepoConsult = () => {
     const [consultResults, setConsultResults] = useState(
         [
             {

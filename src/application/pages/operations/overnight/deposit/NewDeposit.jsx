@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Input, Label, Row } from 'reactstrap'
-import { CustomCover } from '../../../components'
+import { CustomCover } from '../../../../components'
 
 export const NewDeposit = () => {
   return (

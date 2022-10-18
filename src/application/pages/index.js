@@ -5,9 +5,11 @@ export * from './operations/lbtrTransfers/NewTransfer';
 export * from './operations/currency/NewCurrencyBuy';
 export * from './operations/currency/NewCurrencySell';
 export * from './operations/currency/CurrencyConsults'
-export * from './operations/overnight/NewDeposit';
-export * from './operations/overnight/OvernightConsult';
+export * from './operations/overnight/deposit//NewDeposit';
+export * from './operations/overnight/deposit/OvernightConsult';
 export * from './operations/intraday/facility/NewIntraday';
 export * from './operations/intraday/facility/IntradayConsult';
-export * from './operations/intraday/repo/NewRepo';
-export * from './operations/intraday/repo/RepoConsult';
+export * from './operations/intraday/repo/NewIntradayRepo';
+export * from './operations/intraday/repo/IntradayRepoConsult';
+export * from './operations/overnight/repo/NewOvernightRepo';
+export * from './operations/overnight/repo/OvernightRepoConsult';

@@ -24,9 +24,9 @@ export const CustomNavbar = () => {
                                     Configuración
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -44,6 +44,8 @@ export const CustomNavbar = () => {
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -51,9 +53,9 @@ export const CustomNavbar = () => {
                                     Consultas locales
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -61,9 +63,9 @@ export const CustomNavbar = () => {
                                     Administración
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -72,8 +74,8 @@ export const CustomNavbar = () => {
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -81,9 +83,9 @@ export const CustomNavbar = () => {
                                     Reportes
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -91,9 +93,9 @@ export const CustomNavbar = () => {
                                     Auditoría
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -111,9 +113,9 @@ export const CustomNavbar = () => {
                                         Interacción digital SAC
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Action</a></li>
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Another action</a></li>
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="#">Something else here</a></li>
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
+                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>

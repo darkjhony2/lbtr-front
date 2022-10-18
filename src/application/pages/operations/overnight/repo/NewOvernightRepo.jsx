@@ -1,14 +1,15 @@
-import { Button, Col, Container, Input, Label, Row } from "reactstrap"
-import { CustomCover } from "../../../../components"
+import React from 'react'
+import { Button, Col, Container, Input, Label, Row } from 'reactstrap'
+import { CustomCover } from '../../../../components'
 
-export const NewRepo = () => {
+export const NewOvernightRepo = () => {
     return (
         <Container fluid style={{ position: 'relative', paddingBottom: 60, minHeight: '100vh' }}>
             <CustomCover>
                 <Container fluid className="p-3">
                     <Row>
                         <Col>
-                            <span style={{ color: 'gray', borderBottom: '1px solid' }}>Operación {">"} Repo Intradía (RIN) {">"} Nueva</span>
+                            <span style={{ color: 'gray', borderBottom: '1px solid' }}>Operación {">"} Repo Overnight (RON) {">"} Nuevo</span>
                         </Col>
                     </Row>
                     <Row style={{ padding: 0, marginTop: 30 }}>
@@ -18,7 +19,7 @@ export const NewRepo = () => {
                     </Row>
                     <Container fluid className="p-4" style={{ marginTop: 40 }}>
                         <div className="custom">
-                            <h6 style={{ width: 240, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 20 }}>REGISTRO REPO INTRADÍA</b></h6>
+                            <h6 style={{ width: 240, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 20 }}>REGISTRO REPO OVERNIGHT</b></h6>
                             <Row>
                                 <Col sm={6} style={{ paddingLeft: '5%', paddingTop: '2%', paddingBottom: '2%' }}>
                                     <Row className="mt-2">
@@ -45,14 +46,6 @@ export const NewRepo = () => {
                                             <Input className="textField" type="select" ><option>Seleccione</option></Input>
                                         </Col>
                                     </Row>
-                                    <Row className="mt-2">
-                                        <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Instrucción<span style={{ color: 'red' }}> (*)</span>:</Label>
-                                        </Col>
-                                        <Col sm={8}>
-                                            <Input className="textField" type="select" ><option>Seleccione</option></Input>
-                                        </Col>
-                                    </Row>
                                 </Col>
                                 <Col sm={6} style={{ paddingLeft: '5%', paddingTop: '2%', paddingBottom: '2%' }}>
                                     <Row className="mt-2">
@@ -65,7 +58,7 @@ export const NewRepo = () => {
                                     </Row>
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Referencia LBTR:</Label>
+                                            <Label>Referencia BCRP:</Label>
                                         </Col>
                                         <Col sm={8}>
                                             <Input className="textField" disabled type="text" />
@@ -77,14 +70,6 @@ export const NewRepo = () => {
                                         </Col>
                                         <Col sm={8}>
                                             <Input className="textField" disabled type="text" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="mt-2">
-                                        <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Monto<span style={{ color: 'red' }}> (*)</span>:</Label>
-                                        </Col>
-                                        <Col sm={8}>
-                                            <Input className="textField" type="text"/>
                                         </Col>
                                     </Row>
                                 </Col>
