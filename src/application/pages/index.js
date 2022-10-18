@@ -13,3 +13,8 @@ export * from './operations/intraday/repo/NewIntradayRepo';
 export * from './operations/intraday/repo/IntradayRepoConsult';
 export * from './operations/overnight/repo/NewOvernightRepo';
 export * from './operations/overnight/repo/OvernightRepoConsult';
+export * from './localConsults/BalanceMovements';
+export * from './localConsults/OperationConsult';
+export * from './localConsults/Auditory';
+export * from './localConsults/EstadisticReportByDate';
+export * from './localConsults/TransactionReport';

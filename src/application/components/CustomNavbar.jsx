@@ -24,9 +24,9 @@ export const CustomNavbar = () => {
                                     Configuración
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -34,18 +34,18 @@ export const CustomNavbar = () => {
                                     Operación
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -53,9 +53,11 @@ export const CustomNavbar = () => {
                                     Consultas locales
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/balance-movements">Movimiento de Saldo</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/operations-consult">Consultar Operaciones</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/auditory">Auditoría</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/transaction-report">Reporte de transacciones</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/estadistic-report-by-date">Reporte Estadístico por Fecha</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -63,9 +65,9 @@ export const CustomNavbar = () => {
                                     Administración
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -73,9 +75,9 @@ export const CustomNavbar = () => {
                                     Consultas BCRP
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -83,9 +85,9 @@ export const CustomNavbar = () => {
                                     Reportes
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -93,16 +95,16 @@ export const CustomNavbar = () => {
                                     Auditoría
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <nav>
-                    <div className="container-fluid" style={{marginRight: 30}}>
+                    <div className="container-fluid" style={{ marginRight: 30 }}>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -113,9 +115,9 @@ export const CustomNavbar = () => {
                                         Interacción digital SAC
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Action</a></li>
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Another action</a></li>
-                                        <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/">Something else here</a></li>
+                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
+                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
+                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>

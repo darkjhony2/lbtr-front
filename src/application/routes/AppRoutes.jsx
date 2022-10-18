@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import {
   HomePage, NewTransfer, AccountBalance, MovementDetails, NewCurrencyBuy, NewCurrencySell,
   CurrencyConsults, NewDeposit, OvernightConsult, NewIntraday, IntradayConsult, NewIntradayRepo,
-  IntradayRepoConsult, NewOvernightRepo, OvernightRepoConsult
+  IntradayRepoConsult, NewOvernightRepo, OvernightRepoConsult, BalanceMovements, OperationConsult, Auditory, EstadisticReportByDate, TransactionReport
 }
   from "../pages"
 
@@ -24,6 +24,11 @@ export const AppRoutes = () => {
       <Route path="/operacion/repo-intradia/consulta-repo" element={<IntradayRepoConsult />} />
       <Route path="/operacion/repo-overnight/nueva-repo" element={<NewOvernightRepo />} />
       <Route path="/operacion/repo-overnight/consulta-repo" element={<OvernightRepoConsult />} />
+      <Route path="/local-consults/balance-movements" element={<BalanceMovements />} />
+      <Route path="/local-consults/operations-consult" element={<OperationConsult />} />
+      <Route path="/local-consults/estadistic-report-by-date" element={<EstadisticReportByDate />} />
+      <Route path="/local-consults/auditory" element={<Auditory />} />
+      <Route path="/local-consults/transaction-report" element={<TransactionReport />} />
     </Routes>
   )
 }
