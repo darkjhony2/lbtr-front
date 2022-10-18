@@ -38,8 +38,12 @@ export const CustomNavbar = () => {
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
                                     <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/nuevo-deposito">Nuevo Deposito</a></li>
-                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/compra-moneda/consulta-overnight">Consulta Overnight</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
+                                    <li style={{paddingLeft: 0}}><a className="dropdown-item" href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">

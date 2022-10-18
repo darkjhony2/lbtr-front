@@ -2,7 +2,7 @@ import { faCaretLeft, faCaretRight, faEdit, faFileExcel } from '@fortawesome/fre
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { Button, Col, Container, Input, Label, Row, Table } from 'reactstrap'
-import { CustomCover } from '../../components'
+import { CustomCover } from '../../../components'
 
 export const OvernightConsult = () => {
 

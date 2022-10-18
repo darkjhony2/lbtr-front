@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Input, Label, Row } from 'reactstrap'
-import { CustomCover } from '../../components'
+import { CustomCover } from '../../../components'
 
 export const NewDeposit = () => {
   return (
@@ -17,7 +17,7 @@ export const NewDeposit = () => {
               <Button className="button" > <span style={{ padding: 20, paddingTop: 15, paddingBottom: 15 }}>Guardar</span></Button>
             </Col>
           </Row>
-          <Container fluid className="p-4" style={{marginTop: 40}}>
+          <Container fluid className="p-4" style={{ marginTop: 40 }}>
             <div className="custom">
               <h6 style={{ width: 220, backgroundColor: 'white', marginTop: '-12px', marginLeft: 40 }}><b style={{ marginLeft: 16 }}>REGISTRO DE DEPÓSITO</b></h6>
               <Row>
@@ -69,7 +69,7 @@ export const NewDeposit = () => {
                       <Label>Estado:</Label>
                     </Col>
                     <Col sm={8}>
-                      <Input className="textField" disabled value={'Pendiente'} type="text"/>
+                      <Input className="textField" disabled value={'Pendiente'} type="text" />
                     </Col>
                   </Row>
                   <Row className="mt-2">
