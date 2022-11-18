@@ -33,3 +33,15 @@ code {
 .label-white {
   color: white;
 }
+
+.no-padding-left {
+  padding-left: 0px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+a {
+  padding-bottom: 3px !important;
+}

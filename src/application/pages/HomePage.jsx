@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Row } from 'reactstrap'
 import { CustomCover } from '../components';
 
 export const HomePage = () => {

@@ -1,130 +1,140 @@
-import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 export const CustomNavbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [urlRoot, setUrlRoot] = useState("")
-
-    const toggle = () => setIsOpen(!isOpen);
-
     return (
-        <>
-            <nav className="navbar navbar-expand-lg navbar-light ">
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link active textWhite" aria-current="page" href="/">Incio</a>
+        <div className="menu-bar">
+            <ul>
+                <li><a className="textWhite textBottomBorder" href="/">Incio</a></li>
+                <li><a className="textWhite textBottomBorder" href="#">Configuración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="#">Action</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Operación <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                            <li >
+                                <a href="#">Compra Moneda<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
+                                        <li ><a href="/operacion/compra-moneda/consulta">Consultas</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Configuración
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
+                            <li >
+                                <a href="#">Venta Moneda<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Operación
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/compra-moneda/consulta">Consultas</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
-                                </ul>
+                            <li >
+                                <a href="#">Depósito Overnight<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
+                                        <li ><a href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consultas locales
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/balance-movements">Movimiento de Saldo</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/operations-consult">Consultar Operaciones</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/auditory">Auditoría</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/transaction-report">Reporte de transacciones</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/local-consults/estadistic-report-by-date">Reporte Estadístico por Fecha</a></li>
-                                </ul>
+                            <li >
+                                <a href="#">Repo Overnight<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
+                                        <li ><a href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Administración
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
+                            <li >
+                                <a href="#">Facilidad intradía<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
+                                        <li ><a href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Consultas BCRP
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/consultasbcrp/saldos">Saldos</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Reportes
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Auditoría
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                </ul>
+                            <li >
+                                <a href="#">Repo Intradía<i className="fas fa-caret-right"></i></a>
+                                <div className="dropdown-menu-1">
+                                    <ul>
+                                        <li ><a href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
+                                        <li ><a href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <nav>
-                    <div className="container-fluid" style={{ marginRight: 30 }}>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul className="navbar-nav">
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Interacción digital SAC
-                                    </a>
-                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Action</a></li>
-                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Another action</a></li>
-                                        <li style={{ paddingLeft: 0 }}><a className="dropdown-item" href="/">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Consultas locales <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="/local-consults/balance-movements">Movimiento de Saldo</a></li>
+                            <li ><a href="/local-consults/operations-consult">Consultar Operaciones</a></li>
+                            <li ><a href="/local-consults/auditory">Auditoría</a></li>
+                            <li ><a href="/local-consults/transaction-report">Reporte de transacciones</a></li>
+                            <li ><a href="/local-consults/estadistic-report-by-date">Reporte Estadístico por Fecha</a></li>
+                        </ul>
                     </div>
-                </nav>
-            </nav>
-        </>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Administración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="#">Action</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Consultas BCRP <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="/consultasbcrp/saldos">Saldos</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Reportes <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="#">Action</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a className="textWhite textBottomBorder" href="#">Auditoría <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="#">Action</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul style={{marginRight: 30}}>
+                <li><a className="textWhite textBottomBorder" href="#">Interacción digital SAC <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                    <div className="dropdown-menu">
+                        <ul>
+                            <li ><a href="#">Action</a></li>
+                            <li ><a href="#">Another action</a></li>
+                            <li ><a href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     )
 }
