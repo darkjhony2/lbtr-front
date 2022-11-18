@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import { LoginPage } from "../../auth"
 import {
   HomePage, NewTransfer, AccountBalance, MovementDetails, NewCurrencyBuy, NewCurrencySell,
   CurrencyConsults, NewDeposit, OvernightConsult, NewIntraday, IntradayConsult, NewIntradayRepo,
@@ -10,6 +11,7 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/operacion/transferencias/nueva-transferencia" element={<NewTransfer />} />
       <Route path="/consultasbcrp/saldos" element={<AccountBalance />} />
       <Route path="/consultasbcrp/saldos/detalles-movimientos" element={<MovementDetails />} />
