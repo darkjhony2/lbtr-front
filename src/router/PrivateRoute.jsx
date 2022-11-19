@@ -1,14 +1,11 @@
-import { useContext } from "react"
-import { Navigate, useLocation } from "react-router-dom";
-import { AuthContext } from "../auth";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 export const PrivateRoute = ({ children }) => {
 
-    const { logged } = useContext(AuthContext);
-    const { pathname, search } = useLocation();
+    const { logged } = useSelector(state => state.auth);
 
-    const lastPath = pathname + search;
-    localStorage.setItem('lastPath', lastPath);
+    console.log(logged);
 
     return (logged) ? children : <Navigate to={'/login'} />
 }

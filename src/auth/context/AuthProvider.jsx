@@ -14,7 +14,7 @@ const init = () => {
 
 export const AuthProvider = ({ children }) => {
 
-    const { user, password, logged } = useSelector(state => state.auth);
+    const { logged } = useSelector(state => state.auth);
     const dispatch = useDispatch();
 
     const login = (name = '') => {

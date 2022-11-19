@@ -10,7 +10,7 @@ import {
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/operacion/transferencias/nueva-transferencia" element={<NewTransfer />} />
       <Route path="/consultasbcrp/saldos" element={<AccountBalance />} />

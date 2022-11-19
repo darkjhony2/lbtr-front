@@ -1,136 +1,145 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginOut } from "../../store/slices/auth";
 
 export const CustomNavbar = () => {
+
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(loginOut());
+    }
 
     return (
         <div className="menu-bar">
             <ul>
-                <li><a className="textWhite textBottomBorder" href="/">Incio</a></li>
-                <li><a className="textWhite textBottomBorder" href="#">Configuración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="/home">Incio</NavLink></li>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Configuración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="#">Action</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="#">Action</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink to="#">Something else here</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Operación <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Operación <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</a></li>
+                            <li ><NavLink to="/operacion/transferencias/nueva-transferencia">Nueva Transferencia</NavLink></li>
                             <li >
-                                <a href="#">Compra Moneda<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Compra Moneda<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/compra-moneda/nueva-compra">Nueva Compra</a></li>
-                                        <li ><a href="/operacion/compra-moneda/consulta">Consultas</a></li>
+                                        <li ><NavLink to="/operacion/compra-moneda/nueva-compra">Nueva Compra</NavLink></li>
+                                        <li ><NavLink to="/operacion/compra-moneda/consulta">Consultas</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li >
-                                <a href="#">Venta Moneda<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Venta Moneda<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/venta-moneda/nueva-venta">Nueva Venta</a></li>
+                                        <li ><NavLink to="/operacion/venta-moneda/nueva-venta">Nueva Venta</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li >
-                                <a href="#">Depósito Overnight<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Depósito Overnight<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</a></li>
-                                        <li ><a href="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</a></li>
+                                        <li ><NavLink to="/operacion/deposito-overnight/nuevo-deposito">Nuevo Deposito</NavLink></li>
+                                        <li ><NavLink to="/operacion/deposito-overnight/consulta-overnight">Consulta Overnight</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li >
-                                <a href="#">Repo Overnight<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Repo Overnight<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</a></li>
-                                        <li ><a href="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</a></li>
+                                        <li ><NavLink to="/operacion/repo-overnight/nueva-repo">Nuevo Repo Overnight</NavLink></li>
+                                        <li ><NavLink to="/operacion/repo-overnight/consulta-repo">Consulta Repo Overnight</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li >
-                                <a href="#">Facilidad intradía<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Facilidad intradía<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</a></li>
-                                        <li ><a href="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</a></li>
+                                        <li ><NavLink to="/operacion/facilidad-intradia/nueva-intradia">Nueva Intradía</NavLink></li>
+                                        <li ><NavLink to="/operacion/facilidad-intradia/consulta-intradia">Consulta Intradía</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                             <li >
-                                <a href="#">Repo Intradía<i className="fas fa-caret-right"></i></a>
+                                <NavLink to="#">Repo Intradía<i className="fas fa-caret-right"></i></NavLink>
                                 <div className="dropdown-menu-1">
                                     <ul>
-                                        <li ><a href="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</a></li>
-                                        <li ><a href="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</a></li>
+                                        <li ><NavLink to="/operacion/repo-intradia/nueva-repo">Nueva Repo Intradía</NavLink></li>
+                                        <li ><NavLink to="/operacion/repo-intradia/consulta-repo">Consulta Repo Intradía</NavLink></li>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Consultas locales <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Consultas locales <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="/local-consults/balance-movements">Movimiento de Saldo</a></li>
-                            <li ><a href="/local-consults/operations-consult">Consultar Operaciones</a></li>
-                            <li ><a href="/local-consults/auditory">Auditoría</a></li>
-                            <li ><a href="/local-consults/transaction-report">Reporte de transacciones</a></li>
-                            <li ><a href="/local-consults/estadistic-report-by-date">Reporte Estadístico por Fecha</a></li>
+                            <li ><NavLink to="/local-consults/balance-movements">Movimiento de Saldo</NavLink></li>
+                            <li ><NavLink to="/local-consults/operations-consult">Consultar Operaciones</NavLink></li>
+                            <li ><NavLink to="/local-consults/auditory">Auditoría</NavLink></li>
+                            <li ><NavLink to="/local-consults/transaction-report">Reporte de transacciones</NavLink></li>
+                            <li ><NavLink to="/local-consults/estadistic-report-by-date">Reporte Estadístico por Fecha</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Administración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Administración <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="#">Action</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="#">Action</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink to="#">Something else here</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Consultas BCRP <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Consultas BCRP <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="/consultasbcrp/saldos">Saldos</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="/consultasbcrp/saldos">Saldos</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink to="#">Something else here</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Reportes <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Reportes <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="#">Action</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="#">Action</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink to="#">Something else here</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><a className="textWhite textBottomBorder" href="#">Auditoría <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Auditoría <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="#">Action</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="#">Action</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink to="#">Something else here</NavLink></li>
                         </ul>
                     </div>
                 </li>
             </ul>
             <ul style={{marginRight: 30}}>
-                <li><a className="textWhite textBottomBorder" href="#">Interacción digital SAC <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></a>
+                <li><NavLink className="textWhite textBottomBorder" to="#">Interacción digital SAC <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon></NavLink>
                     <div className="dropdown-menu">
                         <ul>
-                            <li ><a href="#">Action</a></li>
-                            <li ><a href="#">Another action</a></li>
-                            <li ><a href="#">Something else here</a></li>
+                            <li ><NavLink to="#">Action</NavLink></li>
+                            <li ><NavLink to="#">Another action</NavLink></li>
+                            <li ><NavLink onClick={handleLogout} to={'/login'}>Cerrar Sesión</NavLink></li>
                         </ul>
                     </div>
                 </li>
