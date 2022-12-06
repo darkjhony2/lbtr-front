@@ -6,7 +6,6 @@ import * as authApi from '../../api/authApi'
 import { useState } from "react";
 import { parseJwt } from "../../utils";
 import { singIn } from '../../store/slices/auth'
-import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
 
@@ -15,7 +14,6 @@ export const LoginPage = () => {
     password: ''
   })
 
-  const authState = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -27,8 +25,9 @@ export const LoginPage = () => {
 
   const handleSubmit = async() => {
     const { token } = await authApi.login(user);
-    const tokenDecoded = parseJwt(token);
+    //const tokenDecoded = parseJwt(token);
     if(token){
+      localStorage.setItem("owl",token)
       dispatch(singIn())
     }
     localStorage.setItem('logged', true)
@@ -47,11 +46,11 @@ export const LoginPage = () => {
             <h1>Login Page</h1>
             <div>
               <img src={email} alt="email" className="email" />
-              <input type="text" placeholder="usuario" className="name" name="username" onChange={handleChange} value={user.username} />
+              <input type="text" placeholder="usuario" className="name login-input" name="username" onChange={handleChange} value={user.username} />
             </div>
             <div className="second-input">
               <img src={pass} alt="pass" className="email" />
-              <input type="password" placeholder="constraseña" className="name" name="password" onChange={handleChange} value={user.password} />
+              <input type="password" placeholder="constraseña" className="name login-input" name="password" onChange={handleChange} value={user.password} />
             </div>
             <div className="login-button">
               <button className="button-customized" onClick={handleSubmit} >Login</button>

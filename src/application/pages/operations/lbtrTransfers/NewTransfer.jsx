@@ -1,13 +1,47 @@
 import { useEffect, useState } from "react";
-import { Button, Col, Container, Input, Label, Row } from "reactstrap"
+import { Button, Col, Container, Input, Label, Row } from "reactstrap";
 import { CustomCover } from "../../../components";
+import * as servAndConcepApi from '../../../../api/servicesAndConceptsApi';
+import * as identificationApi from '../../../../api/identificationApi';
+import * as bankApi from '../../../../api/banksApi'
+import { useDispatch } from "react-redux";
+import { getConcepts, getServices } from "../../../../store/slices/servicesAndConcepts";
+import { getBanks } from "../../../../store/slices/banks";
 
 export const NewTransfer = () => {
 
     const [clientData] = useState(true);
+    
+    const dispatch = useDispatch();
 
-    console.log(clientData)
+    const fetchServices = async() => {
+        let services = await servAndConcepApi.getServices();
+        dispatch(getServices(services));
+    }
 
+    const fetchConcepts = async() => {
+        let concepts = await servAndConcepApi.getConcepts();
+        dispatch(getConcepts(concepts));
+    }
+
+    const fetchIdentificationTypes = async() => {
+        let identificationTypes = await identificationApi.getIdentificationTypes();
+        dispatch(getConcepts(identificationTypes));
+    }
+
+    const fetchBanks = async() => {
+        let banks = await bankApi.getBanks("name");
+        dispatch(getBanks(banks));
+    }
+
+
+    useEffect(() => {
+        fetchServices();
+        fetchConcepts();
+        fetchIdentificationTypes();
+        fetchBanks();
+    }, [])
+    
 
     return (
         <Container fluid style={{ position: 'relative', paddingBottom: 60, minHeight: '100vh' }}>

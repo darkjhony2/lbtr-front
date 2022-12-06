@@ -5,7 +5,5 @@ export const PrivateRoute = ({ children }) => {
 
     const { logged } = useSelector(state => state.auth);
 
-    console.log(logged);
-
-    return (logged) ? children : <Navigate to={'/login'} />
+    return logged || localStorage.getItem("logged") === "true" ? children : <Navigate to={'/login'} />
 }

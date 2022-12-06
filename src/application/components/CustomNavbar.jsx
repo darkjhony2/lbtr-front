@@ -10,6 +10,8 @@ export const CustomNavbar = () => {
 
     const handleLogout = () => {
         dispatch(loginOut());
+        localStorage.setItem("logged", "false");
+        localStorage.removeItem("owl");
     }
 
     return (
