@@ -20,3 +20,11 @@ export const getConcepts = () => {
     }
     return connection.getBody(config)
 }
+
+export const getClientData = (conceptCode) => {
+    let config = {
+        url: BASE_URL + V1_URL + "settlement-concepts-client-data?concept_code=" + conceptCode,
+        headers
+    }
+    return connection.getBody(config)
+}

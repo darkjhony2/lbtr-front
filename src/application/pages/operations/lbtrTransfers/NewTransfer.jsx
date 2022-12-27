@@ -4,35 +4,75 @@ import { CustomCover } from "../../../components";
 import * as servAndConcepApi from '../../../../api/servicesAndConceptsApi';
 import * as identificationApi from '../../../../api/identificationApi';
 import * as bankApi from '../../../../api/banksApi'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getConcepts, getServices } from "../../../../store/slices/servicesAndConcepts";
 import { getBanks } from "../../../../store/slices/banks";
+import { selectTransfer } from '../../../../store/slices/transfers'
+import { CustomDropdown } from "../../../../components/application/CustomDropdown";
+import { getIdentificationTypes } from "../../../../store/slices/identifications/thunks";
 
 export const NewTransfer = () => {
 
-    const [clientData] = useState(true);
-    
+
+    const [transfer, setTransfer] = useState({
+        settlementConceptCode: '-1',
+        destinationBankCode: '-1',
+        currencyCode: '-1',
+        amount: 0,
+        applyTaxes: false,
+        observations: '-1',
+        identificationCode: '-1',
+        clientData: {}
+    })
+    const [currencyName, setCurrencyName] = useState('');
+    let banks = useSelector((state) => state.bank.banks);
+    let concepts = useSelector((state) => state.serviceAndConcept.concepts);
+    let identifications = useSelector((state) => state.identification.identificationTypes)
     const dispatch = useDispatch();
 
-    const fetchServices = async() => {
+
+    const fetchServices = async () => {
         let services = await servAndConcepApi.getServices();
         dispatch(getServices(services));
     }
 
-    const fetchConcepts = async() => {
+    const fetchConcepts = async () => {
         let concepts = await servAndConcepApi.getConcepts();
         dispatch(getConcepts(concepts));
     }
 
-    const fetchIdentificationTypes = async() => {
+    const fetchIdentificationTypes = async () => {
         let identificationTypes = await identificationApi.getIdentificationTypes();
-        dispatch(getConcepts(identificationTypes));
+        dispatch(getIdentificationTypes(identificationTypes));
     }
 
-    const fetchBanks = async() => {
+    const fetchBanks = async () => {
         let banks = await bankApi.getBanks("name");
         dispatch(getBanks(banks));
     }
+
+    const handleChange = (e) => {
+        setTransfer({
+            ...transfer,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const getClientData = async (settlementConceptCode) => {
+        let clientData = await servAndConcepApi.getClientData(settlementConceptCode);
+        let { currency } = concepts.filter(x => x.code === settlementConceptCode)[0]
+        setTransfer({ ...transfer, clientData, currencyCode: currency.code })
+        setCurrencyName(currency.description)
+    }
+
+    useEffect(() => {
+        if (transfer.settlementConceptCode !== "-1") {
+            getClientData(transfer.settlementConceptCode)
+
+        } else {
+            setTransfer({ ...transfer, clientData: {}, currencyCode: {} })
+        }
+    }, [transfer.settlementConceptCode])
 
 
     useEffect(() => {
@@ -41,7 +81,8 @@ export const NewTransfer = () => {
         fetchIdentificationTypes();
         fetchBanks();
     }, [])
-    
+
+
 
     return (
         <Container fluid style={{ position: 'relative', paddingBottom: 60, minHeight: '100vh' }}>
@@ -67,7 +108,7 @@ export const NewTransfer = () => {
                                             <Label>Participante Origen:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" value={'0023 BANCO DE COMERCIO'} disabled type="text"/>
+                                            <Input className="textField" value={'0023 BANCO DE COMERCIO'} disabled type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -75,15 +116,15 @@ export const NewTransfer = () => {
                                             <Label>Fecha de operación:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" value={'22/08/2022'} disabled type="text"/>
+                                            <Input className="textField" value={'22/08/2022'} disabled type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Código LBTR{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
+                                            <Label>Código LBTR{transfer.clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="select"><option>Seleccione</option></Input>
+                                            <CustomDropdown id={"settlementConceptCode"} value={transfer.settlementConceptCode} setValue={e => handleChange(e)} values={concepts} />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -91,7 +132,7 @@ export const NewTransfer = () => {
                                             <Label>Estado de Registro:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" value={'Pendiente'} disabled type="text"/>
+                                            <Input className="textField" value={'Pendiente'} disabled type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -99,7 +140,7 @@ export const NewTransfer = () => {
                                             <Label>Moneda:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" value={'03 Dólares Americanos'} disabled type="text"/>
+                                            <Input className="textField" value={transfer.currencyCode + ' - ' + currencyName} disabled type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -107,17 +148,17 @@ export const NewTransfer = () => {
                                             <Label>Cuenta ordinaria:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" value={'1207010023010000003'} disabled type="text"/>
+                                            <Input className="textField" value={'1207010023010000003'} disabled type="text" />
                                         </Col>
                                     </Row>
                                     {
-                                        clientData === false ?
+                                        transfer.clientData.hasOriginClientData === false || transfer.clientData.hasDestinationClientData === false ?
                                             <Row className="mt-2">
                                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
                                                     <Label>Observaciones:</Label>
                                                 </Col>
                                                 <Col sm={8}>
-                                                    <Input type="textarea"/>
+                                                    <Input type="textarea" />
                                                 </Col>
                                             </Row>
                                             :
@@ -127,26 +168,26 @@ export const NewTransfer = () => {
                                 <Col sm={6} style={{ paddingLeft: '5%', paddingTop: '2%', paddingBottom: '2%' }}>
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Participante Destino{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
+                                            <Label>Participante Destino{transfer.clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="select"><option>Seleccione</option></Input>
+                                            <CustomDropdown id={"destinationBankCode"} value={transfer.destinationBankCode} setValue={e => handleChange(e)} values={banks} />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Monto{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
+                                            <Label>Monto{transfer.clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="text"/>
+                                            <Input className="textField" type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
                                         <Col style={{ paddingRight: 0, maxWidth: 200 }}>
-                                            <Label>Cuenta Destino{clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
+                                            <Label>Cuenta Destino{transfer.clientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" disabled type="text"/>
+                                            <Input className="textField" disabled type="text" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">
@@ -154,17 +195,17 @@ export const NewTransfer = () => {
                                             <Label>Tipo de Cambio:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input className="textField" type="text"/>
+                                            <Input className="textField" type="text" />
                                         </Col>
                                     </Row>
                                     {
-                                        clientData === true ?
+                                        transfer.clientData != undefined && (transfer.clientData.hasOriginClientData === true || transfer.clientData.hasDestinationClientData === true) ?
                                             <Row className="mt-2">
                                                 <Col style={{ paddingRight: 0, maxWidth: 200 }}>
                                                     <Label>Observaciones:</Label>
                                                 </Col>
                                                 <Col sm={8}>
-                                                    <Input type="textarea"/>
+                                                    <Input type="textarea" />
                                                 </Col>
                                             </Row>
                                             :
@@ -181,7 +222,7 @@ export const NewTransfer = () => {
                             </Row>
                         </div>
                         {
-                            clientData === true ?
+                            transfer.clientData != undefined && (transfer.clientData.hasDestinationClientData === true || transfer.clientData.hasDestinationClientData === true) && transfer.settlementConceptCode !== '-1' ?
                                 <>
                                     <br />
                                     <div className="custom">
@@ -197,7 +238,7 @@ export const NewTransfer = () => {
                                                         <Label>CCI:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -205,7 +246,7 @@ export const NewTransfer = () => {
                                                         <Label>Nombre:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -213,7 +254,7 @@ export const NewTransfer = () => {
                                                         <Label>Dirección:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -221,7 +262,8 @@ export const NewTransfer = () => {
                                                         <Label>Tipo Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <CustomDropdown id={"identificationTypeCode"} value={transfer.identificationCode} setValue={e => handleChange(e)}
+                                                            values={identifications} />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -229,7 +271,7 @@ export const NewTransfer = () => {
                                                         <Label>Nro Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -250,7 +292,7 @@ export const NewTransfer = () => {
                                                         <Label>CCI:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -258,7 +300,7 @@ export const NewTransfer = () => {
                                                         <Label>Nombre:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -266,7 +308,7 @@ export const NewTransfer = () => {
                                                         <Label>Tipo Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input className="textField" type="text"/>
+                                                        <Input className="textField" type="text" />
                                                     </Col>
                                                 </Row>
                                                 <Row className="mt-2">
@@ -274,7 +316,7 @@ export const NewTransfer = () => {
                                                         <Label>Nro Documento:</Label>
                                                     </Col>
                                                     <Col sm={8}>
-                                                        <Input type="text"/>
+                                                        <Input type="text" />
                                                     </Col>
                                                 </Row>
                                             </Col>

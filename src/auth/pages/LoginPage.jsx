@@ -1,10 +1,9 @@
 import profile from "../../assets/img/a.png";
 import email from "../../assets/img/email.jpg";
 import pass from "../../assets/img/pass.png";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import * as authApi from '../../api/authApi'
 import { useState } from "react";
-import { parseJwt } from "../../utils";
 import { singIn } from '../../store/slices/auth'
 
 export const LoginPage = () => {
@@ -23,17 +22,17 @@ export const LoginPage = () => {
     });
   };
 
-  const handleSubmit = async() => {
+  const handleSubmit = async () => {
     const { token } = await authApi.login(user);
-    //const tokenDecoded = parseJwt(token);
-    if(token){
-      localStorage.setItem("owl",token)
+    if (token) {
+      localStorage.setItem("owl", token)
       dispatch(singIn())
     }
     localStorage.setItem('logged', true)
   }
 
   return (
+
     <div className="main">
       <div className="sub-main">
         <div>

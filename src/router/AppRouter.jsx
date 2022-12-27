@@ -7,7 +7,7 @@ import { PublicRoute } from "./PublicRoute"
 export const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/login" element={
+            <Route path="/" element={
                 <PublicRoute>
                     <LoginPage />
                 </PublicRoute>

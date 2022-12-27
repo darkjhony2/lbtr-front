@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const bankSlice = createSlice({
-    name: 'bank',
+    name: 'banks',
     initialState: {
         banks: []
     },
