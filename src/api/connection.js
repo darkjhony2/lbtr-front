@@ -8,3 +8,6 @@ export const getBody = async(config) => {
     return (await axios.get(config.url, config)).data;
 }
 
+export const putBody = async (config, body = {}) => {
+    return (await axios.put(config.url, body, config)).data;
+}

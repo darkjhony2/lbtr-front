@@ -16,7 +16,7 @@ export const CustomDropdown = ({ id, values, value, setValue }) => {
     let rows = []
     values.forEach(v => {
       rows.push(
-        <option key={v.code} value={v.code}>{id === "settlementConceptCode" || id === "identificationTypeCode" ? v.code + ' - ' + v.description : v.name}</option>
+        <option key={v.code} value={v.code}>{id === "settlementConceptCode" || id === "documentType"? v.code + ' - ' + v.description : v.name}</option>
       )
     })
     setRowValues(rows)
