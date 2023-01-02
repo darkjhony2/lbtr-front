@@ -277,7 +277,7 @@ export const NewTransfer = () => {
                                             <Label>Monto{transfer.clientData.hasOriginClientData === true || transfer.clientData.hasDestinationClientData === true ? <span style={{ color: 'red' }}> (*)</span> : ""}:</Label>
                                         </Col>
                                         <Col sm={8}>
-                                            <Input name="amount" value={transfer.amount} onChange={e => handleChange(e)} className="textField" type="text" />
+                                            <Input name="amount" value={transfer.amount} onChange={e => handleChange(e)} className="textField" type="number" />
                                         </Col>
                                     </Row>
                                     <Row className="mt-2">

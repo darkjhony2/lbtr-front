@@ -9,7 +9,7 @@ export const CustomDropdown = ({ id, values, value, setValue }) => {
     if (values.length > 0) {
       fillValues()
     }
-  }, [values])
+  }, [,values])
 
 
   function fillValues() {
